@@ -1,16 +1,16 @@
-This was done as part of the introduction to compilers chapter in the software construction course. 
+## This was done as part of the introduction to compilers chapter in the software construction course. 
 
-Recursive Decent parser is a parser that takes input as a text file and outputs whether the input given follows the context free grammar this parser is defining.
+**Recursive Decent parser** is a parser that takes input as a text file and outputs whether the input given follows the context free grammar this parser is defining.
 
 The grammar that the parser is defining is the following:
 
-<program> 		::= {<statement_list>}
-<statement_list> 	::= <statement>;<statement_list>|<statement>;
-<statement> 		::= call: <procedure_call>|compute: <expression>
-<procedure_call>	::= id(<parameters>)
-<parameters>		::= <factor>,<parameters>|<factor>
-<expression> 		::= id=<factor>+<factor>|id=<factor>-<factor>|id=<factor>
-<factor> 		::= id|num
+&lt;program> 		    ::= {&lt;statement_list>}
+&lt;statement_list> 	::= &lt;statement>;&lt;statement_list>|&lt;statement>;
+&lt;statement> 		::= call: &lt;procedure_call>|compute: &lt;expression>
+procedure_call>	::= id(&lt;parameters>)
+&lt;parameters>		::= &lt;factor>,&lt;parameters>|&lt;factor>
+&lt;expression> 		::= id=&lt;factor>+&lt;factor>|id=&lt;factor>-&lt;factor>|id=&lt;factor>
+&lt;factor> 		    ::= id|num
 
 
 Note that this grammar was updated by making left factoring where applicable. After the left factoring, the grammar is the following.
