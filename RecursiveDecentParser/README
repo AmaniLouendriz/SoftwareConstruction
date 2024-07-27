@@ -37,8 +37,7 @@ After some tedious calculations of the First and Follow sets,the parsing table i
 
 
 
-
-# How to interpret the parsing table?
+### How to interpret the parsing table?
 
 suppose we want to parse: { compute: a = 15;}
 
@@ -55,7 +54,7 @@ $
 
 Our input is { compute: a = 15;}
 
-for a terminal of {, we can see the following production: program=>{statement_list} pop program and push the production:
+for a terminal of {, we can see the following production: program=>{statement_list} pop program from the stack and push the production:
 
 {
 statement_list
