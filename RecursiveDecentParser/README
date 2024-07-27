@@ -36,11 +36,13 @@ The grammar now is an LL(1) grammar, meaning it uses the left most derivations, 
 After some tedious calculations of the First and Follow sets,the parsing table is provided below:
 
 
-How to interpret the parsing table?
+
+
+# How to interpret the parsing table?
 
 suppose we want to parse: { compute: a = 15;}
 
-we will use a stack! let's start by pushing the end of string $
+we will use a stack. let's start by pushing the end of string $
 
 
 $
