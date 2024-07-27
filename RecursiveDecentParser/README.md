@@ -68,16 +68,16 @@ $
 Push the first non-terminal into the stack, i.e: program
 
 
-program
+program </br>
 $
 
 Our input is **{ compute: a = 15;}**
 
 for a terminal of **{**, we can see the following production: **program=>{statement_list}** pop program from the stack and push the production:
 
-{
-statement_list
-}
+{ </br>
+statement_list </br>
+}  </br>
 $
 
 the top of the stack is a terminal: **{**, we check if the terminal corresponds to the head of the input. Yes! then pop **{** from the stack: our remaining input to parse is: compute: **a = 15;}**
@@ -85,28 +85,28 @@ the top of the stack is a terminal: **{**, we check if the terminal corresponds 
 the stack now looks like:
 
 
-statement_list
-}
+statement_list  </br>
+}  </br>
 $
 
 the head of the input is the terminal compute, going back to the parsing table, with a non-terminal of statement_list, we can get the production: **statement_list=>statement;statement_list'**
 
 pop statement_list from the stack and insert the following:
 
-statement
-;
-statement_list'
-}
+statement  </br>
+;  </br>
+statement_list'  </br>
+}  </br>
 $
 
 now we have the production statement, remember, the terminal that our input has is still compute, the parsing table says for a terminal compute, and a non terminal statement, the production is: **statement=>compute:expression**. Now we pop statement from the stack and we push this production:
 
-compute
-:
-expression
-;
-statement_list'
-}
+compute  </br>
+:  </br>
+expression   </br>
+;  </br>
+statement_list'   </br>
+}   </br>
 $
 
 
@@ -114,20 +114,20 @@ We have a terminal in the top of the stack! Let's check if it's corresponds to t
 
 it does! pop compute from the stack, the remaining input to parse is: :a = 15;}
 
-:
-expression
-;
-statement_list'
-}
-$
+:   </br>
+expression  </br>
+;   </br>
+statement_list'  </br>
+}   </br>
+$   </br>
 
 
 There is another  terminal in the stack! the **:** . Does the start of the input to parse have the same terminal? Yep, now let's pop **:** from the stack
 
-expression
-;
-statement_list'
-}
+expression   </br>
+;    </br>
+statement_list'   </br> 
+}   </br>
 $
 
 The remaining input to parse is: **a=15;}**
@@ -136,25 +136,25 @@ a is an id, the parsing table says for a non terminal for expression, and a term
 
 pop expression and push this production:
 
-id
-=
-factor
-factor'
-;
-statement_list'
-}
+id  </br>
+=  </br>
+factor  <br>
+factor' <br>
+;  <br>
+statement_list' <br>
+}   <br>
 $
 
 we have a terminal at the top of the stack, id, and the start of our input to parse is a, so it's an id, meaning there is a match!
 
 pop from the stack:
 
-=
-factor
-factor'
-;
-statement_list'
-}
+= </br>
+factor  </br>
+factor'   </br>
+;   </br>
+statement_list'   </br>
+}   </br>
 $
  
 
@@ -162,12 +162,12 @@ Our remaining input to parse is **=15;}**
 
 and we have = at the top of the stack, pop it!
 
-factor
-factor'
-;
-statement_list'
-}
-$
+factor   </br>
+factor'  <br>
+;  <br>
+statement_list'  <br>
+}   <br>
+$  <br>
 
 Our remaining input to parse is:
 
@@ -175,10 +175,10 @@ Our remaining input to parse is:
 
 we have factor at the top of the stack, factor gives a production of factor=>num for a num. then pop factor and push this production:
 
-factor'
-;
-statement_list'
-}
+factor' <br>
+;  <br>
+statement_list'  <br>
+}  <br>
 $ 
 
 Our remaining input to parse is:
@@ -191,15 +191,15 @@ the remaining input to parse is:   ;}
 
 The stack is: 
 
-;
-statement_list'
-}
+;   <br>
+statement_list'   <br>
+}   <br>
 $
 
 the terminal at the top of the stack and at the beginning of the input to parse match, so we pop from the stack:
 
-statement_list'
-}
+statement_list'   <br>
+}    <br>
 $
 
 the remaining input to parse is:    }
@@ -209,7 +209,7 @@ for }, statement_list' gives a production of ε again, we won't push anything bu
 
 the stack is now:
 
-}
+}  <br>
 $
 
 the top of the stack and the start of the input to parse is the same. so we pop }.
