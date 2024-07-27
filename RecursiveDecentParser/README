@@ -30,11 +30,10 @@ No left recursion was detected.
 The grammar now is an LL(1) grammar, meaning it uses the left most derivations, making the parser predictive and a bit more efficient than the Top down parsers that randomly chose a production and have to backtrack each and every time there is a problem.
 
 
-To run, just compile the java file usig "javac RecursiveDescentParser.java" and run "java RecursiveDescentParser inputx.txt". You can either provide your own input.txt file or use the ones present under the tests directory.
+**To run**, just compile the java file usig "**javac RecursiveDescentParser.java**" and run "**java RecursiveDescentParser inputx.txt**". You can either provide your own input.txt file or use the ones present under the tests directory.
 
 
 After some tedious calculations of the First and Follow sets,the parsing table is provided below:
-
 
 
 How to interpret the parsing table?
