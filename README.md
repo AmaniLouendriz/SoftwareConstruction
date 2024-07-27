@@ -1,0 +1,1 @@
+Those are two projects I got to work on last winter: the first is  the RecursiveDescentParser which parses a given input according to the grammar. Please head to the README of each one of them to get a detailed overview on what the project is and what it does.
